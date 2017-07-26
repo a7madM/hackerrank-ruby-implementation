@@ -1,10 +1,8 @@
-
-
 require_relative 'HurdleRace.rb'
 require_relative 'ClimbingLeaderboard.rb'
 require_relative 'BeautifulDaysAtMovies.rb'
 require_relative 'ViralAdvertising.rb'
-
+require_relative 'SaveThePrisoner.rb'
 def test_hurdleRace
   hurdleRace = HurdleRace.new
   n, k, height = hurdleRace.input
@@ -32,5 +30,13 @@ def test_viral_advertising
   viral_advertising.solve_problem(n)
 end
 
-count = test_viral_advertising
-puts count
+# count = test_viral_advertising
+# puts count
+
+def test_save_prisoner
+  save_prisoner = SaveThePrisoner.new
+  t = save_prisoner.input
+  save_prisoner.run_test_cases(t)
+end
+
+test_save_prisoner
