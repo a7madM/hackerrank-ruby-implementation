@@ -1,3 +1,4 @@
+# problem: https://www.hackerrank.com/challenges/fair-rations/problem
 class FairRations
   def input
     n = gets.strip.to_i

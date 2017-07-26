@@ -4,7 +4,8 @@ require_relative 'BeautifulDaysAtMovies.rb'
 require_relative 'ViralAdvertising.rb'
 require_relative 'SaveThePrisoner.rb'
 require_relative 'SequenceEquation.rb'
-require_relative 'FairRations'
+require_relative 'FairRations.rb'
+require_relative 'ModifiedKaprekarNumbers.rb'
 def test_hurdle_race
   hurdleRace = HurdleRace.new
   n, k, height = hurdleRace.input
@@ -60,4 +61,16 @@ def test_fair_rations
   puts result
 end
 
-test_fair_rations
+# test_fair_rations
+
+def test_modified_kaprekar_numbers
+  modified_kaprekar_numbers = ModifiedKaprekarNumbers.new
+  p, q = modified_kaprekar_numbers.input
+  result = modified_kaprekar_numbers.solve_problem(p, q)
+  print('INVALID RANGE') && return if result.empty?
+  result.each do |item|
+    print "#{item} "
+  end
+end
+
+test_modified_kaprekar_numbers

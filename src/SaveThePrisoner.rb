@@ -1,3 +1,4 @@
+# problem: https://www.hackerrank.com/challenges/save-the-prisoner/problem
 class SaveThePrisoner
   def input
     t = gets.strip.to_i

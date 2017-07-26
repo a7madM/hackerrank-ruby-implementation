@@ -1,3 +1,4 @@
+# problem https://www.hackerrank.com/challenges/permutation-equation/problem
 class SequenceEquation
   def input
     t = gets.strip.to_i
