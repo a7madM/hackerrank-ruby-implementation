@@ -4,7 +4,8 @@ require_relative 'BeautifulDaysAtMovies.rb'
 require_relative 'ViralAdvertising.rb'
 require_relative 'SaveThePrisoner.rb'
 require_relative 'SequenceEquation.rb'
-def test_hurdleRace
+require_relative 'FairRations'
+def test_hurdle_race
   hurdleRace = HurdleRace.new
   n, k, height = hurdleRace.input
   result = hurdleRace.min_magic_beverages(n, k, height)
@@ -50,4 +51,13 @@ def test_sequence_equation
   puts result
 end
 
-test_sequence_equation
+# test_sequence_equation
+
+def test_fair_rations
+  fair_rations = FairRations.new
+  n, b = fair_rations.input
+  result = fair_rations.solve_problem(n, b)
+  puts result
+end
+
+test_fair_rations
