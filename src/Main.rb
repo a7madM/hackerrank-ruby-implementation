@@ -3,6 +3,7 @@ require_relative 'ClimbingLeaderboard.rb'
 require_relative 'BeautifulDaysAtMovies.rb'
 require_relative 'ViralAdvertising.rb'
 require_relative 'SaveThePrisoner.rb'
+require_relative 'SequenceEquation.rb'
 def test_hurdleRace
   hurdleRace = HurdleRace.new
   n, k, height = hurdleRace.input
@@ -39,4 +40,14 @@ def test_save_prisoner
   save_prisoner.run_test_cases(t)
 end
 
-test_save_prisoner
+# test_save_prisoner
+
+def test_sequence_equation
+  sequence_equation = SequenceEquation.new
+  input = sequence_equation.input
+  result = sequence_equation.solve_problem(input)
+
+  puts result
+end
+
+test_sequence_equation

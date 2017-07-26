@@ -1,9 +1,8 @@
 # problem https://www.hackerrank.com/challenges/cats-and-a-mouse
 
-
 def get_queries
-    q = gets.strip.to_i
-    return q
+  q = gets.strip.to_i
+  q
 end
 
 def get_input
@@ -11,30 +10,25 @@ def get_input
   x = x.to_i
   y = y.to_i
   z = z.to_i
-  return x,y,z
+  [x, y, z]
 end
-def solve_problem(x,y,z)
-    x = (z - x).to_i.abs
-    y = (z - y).to_i.abs
-    
-    if x == y
-        return 'Mouse C'
-    end
 
-    if x > y
-        return 'Cat B'
-    end
-    
-    if x < y
-        return 'Cat A'
-    end
+def solve_problem(x, y, z)
+  x = (z - x).to_i.abs
+  y = (z - y).to_i.abs
+
+  return 'Mouse C' if x == y
+
+  return 'Cat B' if x > y
+
+  return 'Cat A' if x < y
 end
 
 q = get_queries
 
 while q > 0
-    x,y,z = get_input
-    result = solve_problem(x,y,z)
-    puts result
-    q -= 1
+  x, y, z = get_input
+  result = solve_problem(x, y, z)
+  puts result
+  q -= 1
 end
