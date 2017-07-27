@@ -9,11 +9,29 @@ require_relative 'ModifiedKaprekarNumbers.rb'
 require_relative 'CavityMap.rb'
 require_relative 'StrangeCounter.rb'
 require_relative 'HappyLadyBugs.rb'
+require_relative 'JumbingOnClouds.rb'
+require_relative 'JumbingOnClouds2.rb'
+
+def test_jumbing_on_the_clouds
+  jumbing_on_clouds = JumbingOnClouds.new
+  n, k, clouds = jumbing_on_clouds.input
+  result = jumbing_on_clouds.solve_problem n, k, clouds
+  puts result
+end
+# test_jumbing_on_the_clouds
+
+def test_jumbing_on_the_clouds_2
+  jumbing_on_clouds = JumbingOnClouds2.new
+  clouds = jumbing_on_clouds.input
+  result = jumbing_on_clouds.solve_problem clouds
+  puts result
+end
+test_jumbing_on_the_clouds_2
 
 def test_hurdle_race
-  hurdleRace = HurdleRace.new
-  n, k, height = hurdleRace.input
-  result = hurdleRace.min_magic_beverages(n, k, height)
+  hurdle_race = HurdleRace.new
+  n, k, height = hurdle_race.input
+  result = hurdle_race.min_magic_beverages(n, k, height)
   puts result
 end
 
@@ -117,4 +135,4 @@ def test_happy_lady_bug
   end
 end
 
-test_happy_lady_bug
+# test_happy_lady_bug
