@@ -8,6 +8,8 @@ require_relative 'FairRations.rb'
 require_relative 'ModifiedKaprekarNumbers.rb'
 require_relative 'CavityMap.rb'
 require_relative 'StrangeCounter.rb'
+require_relative 'HappyLadyBugs.rb'
+
 def test_hurdle_race
   hurdleRace = HurdleRace.new
   n, k, height = hurdleRace.input
@@ -100,4 +102,19 @@ def test_strange_counter
   puts result
 end
 
-test_strange_counter
+# test_strange_counter
+
+def test_happy_lady_bug
+  happy_lady_bugs = HappyLadyBugs.new
+  input = happy_lady_bugs.input
+  input.each do |b|
+    result = happy_lady_bugs.solve_problem(b)
+    if result == true
+      puts 'YES'
+    else
+      puts 'NO'
+    end
+  end
+end
+
+test_happy_lady_bug
