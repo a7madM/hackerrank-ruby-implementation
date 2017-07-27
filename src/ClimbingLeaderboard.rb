@@ -2,7 +2,7 @@
 
 class ClimbingLeaderboard
   attr_accessor :index
-
+  @@steps = 0
   def initialize; end
 
   def input
@@ -33,15 +33,12 @@ class ClimbingLeaderboard
   end
 
   def get_alice_rank(alice_rank, ranks)
-    temp_ranks = Array.new(ranks)
-    temp_ranks << alice_rank
-    temp_ranks.sort!.uniq!
+    index = ranks.bsearch_index { |x| x >= alice_rank }
+    rank = ranks.length - index
+    rank
+  end
 
-    rank = temp_ranks.length
-
-    temp_ranks.each do |item|
-      return rank if item == alice_rank
-      rank -= 1
-    end
+  def steps
+    @@steps
   end
 end

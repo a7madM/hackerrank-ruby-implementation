@@ -6,6 +6,8 @@ require_relative 'SaveThePrisoner.rb'
 require_relative 'SequenceEquation.rb'
 require_relative 'FairRations.rb'
 require_relative 'ModifiedKaprekarNumbers.rb'
+require_relative 'CavityMap.rb'
+require_relative 'StrangeCounter.rb'
 def test_hurdle_race
   hurdleRace = HurdleRace.new
   n, k, height = hurdleRace.input
@@ -18,6 +20,8 @@ def test_climbingleader
   scores, alice = climbing_leader.input
   climbing_leader.solve_problem(alice, scores)
 end
+
+# test_climbingleader
 
 def test_beautiful_days_at_movies
   beautiful_days_at_movies = BeautifulDaysAtMovies.new
@@ -73,4 +77,27 @@ def test_modified_kaprekar_numbers
   end
 end
 
-test_modified_kaprekar_numbers
+# test_modified_kaprekar_numbers
+
+def test_cavity_map
+  cavity_map = CavityMap.new
+  grid = cavity_map.input
+  result = cavity_map.solve_problem(grid)
+  result.each do |item|
+    item.each do |inner|
+      print inner
+    end
+    puts ''
+  end
+end
+
+# test_cavity_map
+
+def test_strange_counter
+  strange_counter = StrangeCounter.new
+  input = strange_counter.input
+  result = strange_counter.solve_problem(input)
+  puts result
+end
+
+test_strange_counter
