@@ -11,6 +11,20 @@ require_relative 'StrangeCounter.rb'
 require_relative 'HappyLadyBugs.rb'
 require_relative 'JumbingOnClouds.rb'
 require_relative 'JumbingOnClouds2.rb'
+require_relative 'AppendAndDelete.rb'
+
+def append_and_delete
+  append_and_delete = AppendAndDelete.new
+  s, t, k = append_and_delete.input
+  result = append_and_delete.solve(s, t, k)
+  if result
+    puts 'Yes'
+  else
+    puts 'No'
+  end
+end
+
+append_and_delete
 
 def test_jumbing_on_the_clouds
   jumbing_on_clouds = JumbingOnClouds.new
@@ -26,7 +40,7 @@ def test_jumbing_on_the_clouds_2
   result = jumbing_on_clouds.solve_problem clouds
   puts result
 end
-test_jumbing_on_the_clouds_2
+# test_jumbing_on_the_clouds_2
 
 def test_hurdle_race
   hurdle_race = HurdleRace.new

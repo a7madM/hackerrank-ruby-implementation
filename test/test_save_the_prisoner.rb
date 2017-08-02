@@ -31,7 +31,6 @@ class TestSaveThePrisoner < Test::Unit::TestCase
     assert_equal(72_975_907, result)
 
     result = save_prisoner.save_the_prisoner(499_999_999, 999_999_997, 2)
-  
     assert_equal(499_999_999, result)
   end
 end
