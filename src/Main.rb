@@ -12,6 +12,27 @@ require_relative 'HappyLadyBugs.rb'
 require_relative 'JumbingOnClouds.rb'
 require_relative 'JumbingOnClouds2.rb'
 require_relative 'AppendAndDelete.rb'
+require_relative 'CutSticks.rb'
+require_relative 'RepeatedString.rb'
+
+def repeated_string
+  repeated_string = RepeatedString.new
+  s, n = repeated_string.input
+  output = repeated_string.solve(s, n)
+  p output
+end
+repeated_string
+
+def cut_sticks
+  cut_sticks = CutSticks.new
+  input = cut_sticks.input
+  output = cut_sticks.solve input
+  output.each do |result|
+    p result
+  end
+end
+
+# cut_sticks
 
 def append_and_delete
   append_and_delete = AppendAndDelete.new
@@ -24,7 +45,7 @@ def append_and_delete
   end
 end
 
-append_and_delete
+# append_and_delete
 
 def test_jumbing_on_the_clouds
   jumbing_on_clouds = JumbingOnClouds.new
