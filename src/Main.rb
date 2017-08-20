@@ -14,6 +14,29 @@ require_relative 'JumbingOnClouds2.rb'
 require_relative 'AppendAndDelete.rb'
 require_relative 'CutSticks.rb'
 require_relative 'RepeatedString.rb'
+require_relative 'ACMICPCTeam.rb'
+require_relative 'TaumAndBady.rb'
+
+def taum_and_bady
+  t = gets.strip.to_i
+  taum_and_bady = TaumAndBady.new
+  for a0 in (0..t - 1)
+    b, w, x, y, z = taum_and_bady.input
+    result = taum_and_bady.solve(b, w, x, y, z)
+    puts result
+  end
+end
+
+taum_and_bady
+
+def acm_icpc_team
+  acm_icpc_team = ACMICPCTeam.new
+  topic, m, n = acm_icpc_team.input
+  max, count = acm_icpc_team.solve topic, m, n
+  p max
+  p count
+end
+# acm_icpc_team
 
 def repeated_string
   repeated_string = RepeatedString.new
@@ -21,7 +44,7 @@ def repeated_string
   output = repeated_string.solve(s, n)
   p output
 end
-repeated_string
+# repeated_string
 
 def cut_sticks
   cut_sticks = CutSticks.new
