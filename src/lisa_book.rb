@@ -11,9 +11,7 @@ class LisaBook
     page_number = 1
     chapters.each do |i|
       1.upto(i) do |x|
-        # puts x
         special_problems += 1 if x == page_number
-
         page_number += 1 if (x % k).zero? || x == i
       end
     end
