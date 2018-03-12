@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'HurdleRace.rb'
 require_relative 'ClimbingLeaderboard.rb'
 require_relative 'BeautifulDaysAtMovies.rb'
@@ -16,6 +18,13 @@ require_relative 'CutSticks.rb'
 require_relative 'RepeatedString.rb'
 require_relative 'ACMICPCTeam.rb'
 require_relative 'TaumAndBady.rb'
+require_relative 'manasa_and_stones.rb'
+
+
+def manasa_and_stones
+  ManasaAndStones.new.input
+end
+manasa_and_stones
 
 def taum_and_bady
   t = gets.strip.to_i
@@ -27,7 +36,7 @@ def taum_and_bady
   end
 end
 
-taum_and_bady
+# taum_and_bady
 
 def acm_icpc_team
   acm_icpc_team = ACMICPCTeam.new
