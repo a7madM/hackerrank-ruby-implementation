@@ -2,7 +2,6 @@
 
 # https://www.hackerrank.com/challenges/manasa-and-stones/problem
 class ManasaAndStones
-  
   def stones(stones, one, two)
     result = []
     stones -= 1
@@ -30,8 +29,7 @@ class ManasaAndStones
       b = gets.strip.to_i
       result = stones(n, a, b)
       print result
-      puts ""
+      puts ''
     end
   end
 end
-
