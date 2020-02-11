@@ -40,5 +40,5 @@ class BalancedBrackets
   end
 end
 
-b = BalancedBrackets.new
-b.input
+# b = BalancedBrackets.new
+# b.input
