@@ -18,6 +18,7 @@ class HappyLadyBugs
 
     b.each_char do |item|
       next if item == '_'
+
       count = b.count item
       return false if count == 1
     end
@@ -30,6 +31,7 @@ class HappyLadyBugs
     end
 
     return false if b.count('_').zero?
+
     true
   end
 

@@ -20,7 +20,6 @@ require_relative 'ACMICPCTeam.rb'
 require_relative 'TaumAndBady.rb'
 require_relative 'manasa_and_stones.rb'
 
-
 def manasa_and_stones
   ManasaAndStones.new.input
 end

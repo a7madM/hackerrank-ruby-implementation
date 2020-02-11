@@ -23,6 +23,7 @@ class ModifiedKaprekarNumbers
     r ||= 0
     sum = r.to_i + l.to_i
     return true if sum == number
+
     false
   end
 end

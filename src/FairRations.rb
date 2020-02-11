@@ -27,6 +27,7 @@ class FairRations
     count = 0
     for i in 0...n do
       next unless b[i].odd?
+
       b[i] += 1
       b[i + 1] += 1
       count += 2

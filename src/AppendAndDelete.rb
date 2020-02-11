@@ -10,6 +10,7 @@ class AppendAndDelete
 
   def solve(s, t, k)
     return true if s == t && (k >= s.length * 2 || k.even?)
+
     i = 0
     i += 1 while s[i] == t[i]
     diff = s.length + t.length - i * 2

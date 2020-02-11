@@ -12,7 +12,7 @@ class BalancedBrackets
                   'YES'
                 else
                   'NO'
-               end
+                end
     end
 
     puts output
@@ -28,7 +28,7 @@ class BalancedBrackets
 
         poped = stack.pop
         return false unless valid_pop? ch, poped
-     end
+      end
     end
     stack.empty?
   end

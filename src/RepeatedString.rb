@@ -4,7 +4,7 @@ class RepeatedString
     s = gets.strip
     n = gets.strip.to_i
     [s, n]
- end
+  end
 
   def solve(string, number)
     count_per_pattern = string.count('a')

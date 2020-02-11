@@ -1,4 +1,3 @@
-
 class JumbingOnClouds
   def input
     n, k = gets.strip.split(' ')

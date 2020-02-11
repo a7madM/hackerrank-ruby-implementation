@@ -13,6 +13,7 @@ class CutSticks
     i = 0
     loop do
       break if input.empty?
+
       min = input.min
       input = input.map { |i| i - min }
       input -= [0]
